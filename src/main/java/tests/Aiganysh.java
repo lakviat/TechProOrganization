@@ -1,7 +1,9 @@
+package tests;
+
 public class Aiganysh {
     public static void main(String[] args) {
-        System.out.println("hello  Nurlan this is Aiganysh writing");
-        System.out.println("hello Aiganysh it's Begimai writing...");
+        System.out.println("hello  Nurlan this is tests.Aiganysh writing");
+        System.out.println("hello tests.Aiganysh it's tests.Begimai writing...");
 
         
 
@@ -9,12 +11,12 @@ public class Aiganysh {
         System.out.println("Hey! this is Zhazgul");
 
         System.out.println("thats mine");
-        System.out.println("Hello this is Rabia");
+        System.out.println("Hello this is tests.Rabia");
 
 
         System.out.println("Good evening");
 
-        System.out.println("Hello again! -Rabia");
+        System.out.println("Hello again! -tests.Rabia");
 
     }
 }
