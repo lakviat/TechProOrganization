@@ -2,12 +2,12 @@ package utilities;
 
 import java.util.ArrayList;
 import java.util.Random;
-
+import java.util.logging.Logger;
 
 
 public class RandomNum {
 
-
+    static private final Logger log = Logger.getLogger(RandomNum.class.getName());
 
     public static ArrayList<Integer> randomNum(){
         ArrayList<Integer> array = new ArrayList<Integer>();
