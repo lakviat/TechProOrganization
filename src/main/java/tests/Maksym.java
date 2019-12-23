@@ -10,7 +10,7 @@ public class Maksym {
     public static void main(String[] args) {
  //      ArrayList<Integer>arr= RandomNum.randomNum();
 //       ArrayList<Integer>arr=new ArrayList<>();
-//        arr.add(112);
+//        arr.add(b112);
 //        arr.add(210);
 //        arr.add(133);
 //        arr.add(1);
