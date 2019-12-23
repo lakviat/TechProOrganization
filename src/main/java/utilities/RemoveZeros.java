@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class RemoveZeros {
 
-    public static void main(String[] args) {
-
-    }
-
+/*
+This method is checking Random Integers and if there are 0 integers,
+this method will remove 0.
+ */
     public static ArrayList<Integer> removeZeros(ArrayList<Integer> arr){
         ArrayList<Integer> intWithoutZero = new ArrayList<Integer>();
 
