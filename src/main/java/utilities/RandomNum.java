@@ -8,7 +8,6 @@ import java.util.Random;
 public class RandomNum {
 
 
-
     public static ArrayList<Integer> randomNum(){
         ArrayList<Integer> array = new ArrayList<Integer>();
 
