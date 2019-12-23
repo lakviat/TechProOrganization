@@ -1,24 +1,32 @@
 package utilities;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FindDuplicates {
 
 
     public static ArrayList<Integer> findDuplicates(ArrayList <Integer> num) {
          ArrayList <Integer> arr = new ArrayList<>();
-        for(int i = 0; i < num.size(); i++) {
-            int count = 0;
 
-            for(int k = 0; k < num.size(); k++) {
+         int [] array = new int [num.size()];
 
-                if(num.get(i) == num.get(k)) {
-                    count++;
+        for (int i = 0; i < num.size() ; i++) {
+            array[i] = num.get(i);
+        }
 
-                    if(count > 1) {
-                      arr.add(num.get(i));
-                    }
+        Arrays.sort(array);
+
+        String str = "";
+        for (int i = 0; i <array.length-1 ; i++) {
+            if(array[i] == array[i+1]){
+
+                if(!str.contains(array[i] + "")){
+
+                    arr.add(array[i]);
+                    str += array[i] + " ";
                 }
+
             }
         }
         return arr;
