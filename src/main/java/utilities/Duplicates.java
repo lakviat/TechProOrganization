@@ -9,9 +9,14 @@ public class Duplicates {
     public static int duplicatesIntegers(ArrayList<Integer>arr){
         int count =0;
 for(int i=0;i<arr.size()-1;i++){
-if(arr.get(i)==(arr.get(i+1))){
-    count++;
-}
+    String str=arr.get(i)+"";
+    for(int j=0;j<str.length()-1;j++){
+        if(str.charAt(j)==str.charAt(j+1)){
+            count++;
+        }
+    }
+
+
 }
 return count;
 }
