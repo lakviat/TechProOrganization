@@ -3,12 +3,12 @@ pipeline {
          stages {
                  stage('Clean') {
                  steps {
-                     echo 'Hi, this is Zulaikha from edureka'
+                     sh '@?dependency:copy-dependencies package'
                  }
                  }
                  stage('Build') {
                  steps {
-                    input('Do you want to proceed?')
+                    'sudo su root'
                  }
                  }
                  stage('Running Tests') {
