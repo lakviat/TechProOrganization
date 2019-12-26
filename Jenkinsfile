@@ -1,45 +1,28 @@
 pipeline {
-         agent any
-         stages {
-                 stage('Clean') {
-                 steps {
-                     sh '@?dependency:copy-dependencies package'
-                 }
-                 }
-                 stage('Build') {
-                 steps {
-                    sh 'sudo su root'
-                 }
-                 }
-                 stage('Running Tests') {
-                 when {
-                       not {
-                            branch "master"
-                       }
-                 }
-                 steps {
-                       echo "Hello"
-                 }
-                 }
-                 stage('Extra Tests') {
-                 parallel {
-                            stage('Unit Test') {
-                           steps {
-                                echo "Running the unit test..."
-                           }
-                           }
-                            stage('Integration test') {
-                              agent {
-                                    docker {
-                                            reuseNode true
-                                            image 'ubuntu'
-                                           }
-                                    }
-                              steps {
-                                echo "Running the integration test..."
-                              }
-                           }
-                           }
-                           }
-              }
+    agent any
+    tools {
+        maven 'Maven 3.3.9'
+        jdk 'jdk8'
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
+            }
+        }
+
+        stage ('Build') {
+            steps {
+                sh 'mvn -Dmaven.test.failure.ignore=true install'
+            }
+            post {
+                success {
+                    junit 'target/surefire-reports/**/*.xml'
+                }
+            }
+        }
+    }
 }
