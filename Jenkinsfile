@@ -2,7 +2,9 @@ pipeline{
 parameters {
             choice(name: 'JOB', choices: ['Test','Test2'], description: 'Please choose job')
     }
-
+    agent{
+    any
+    }
     stages {
         stage('Clean'){
         steps {
