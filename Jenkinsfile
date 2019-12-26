@@ -2,9 +2,14 @@ pipeline{
 parameters {
             choice(name: 'JOB', choices: ['Test','Test2'], description: 'Please choose job')
     }
+
     agent{
-    any
+    'any'
     }
+
+
+
+
     stages {
         stage('Clean'){
         steps {
@@ -26,5 +31,9 @@ parameters {
                 }
             }
         }
+    }
+
+    success{
+        emailext body : '$PROJECT_NAME - Build # $BUILD_NUMBER - SUCCESS!\r\rCheck console output at $BUILD_URL to view the results.' , subject: ''
     }
 }
