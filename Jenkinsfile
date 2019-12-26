@@ -8,7 +8,7 @@ pipeline {
                  }
                  stage('Build') {
                  steps {
-                    sudo 'su root'
+                    sh 'sudo su root'
                  }
                  }
                  stage('Running Tests') {
