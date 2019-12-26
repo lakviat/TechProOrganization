@@ -1,25 +1,26 @@
-pipeline {
-    agent any
-    tools {
-
+pipeline{
+parameters {
+            choice(name: 'JOB', choices: ['Test','Test2'], description: 'Please choose job')
     }
+
     stages {
-        stage ('Initialize') {
-            steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                '''
+        stage('Clean'){
+        steps {
+            sh 'mvn clean'
             }
         }
 
-        stage ('Build') {
+     stage {
+            stage('Build'){
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install'
+                sh 'mvn test'
+                }
             }
-            post {
-                success {
-                    junit 'target/surefire-reports/**/*.xml'
+     stages {
+              stage('Test'){
+              steps {
+                  sh 'mvn clean'
+                    }
                 }
             }
         }
