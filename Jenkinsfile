@@ -1,39 +1,42 @@
-pipeline{
-parameters {
-            choice(name: 'JOB', choices: ['Test','Test2'], description: 'Please choose job')
-    }
+pipeline {
+         agent any
+         stages {
+                 stage('Build') {
+                 steps {
+                     echo 'Hi, GeekFlare. Starting to build the App.'
+                 }
+                 }
+                 stage('Test') {
+                 steps {
+                    input('Do you want to proceed?')
+                 }
+                 }
+                 stage('Deploy') {
+                 parallel {
+                            stage('Deploy start ') {
+                           steps {
+                                echo "Start the deploy .."
+                           }
+                           }
+                            stage('Deploying now') {
+                            agent {
+                                    docker {
+                                            reuseNode true
+                                            image ‘nginx’
+                                           }
+                                    }
 
-    agent{
-    'any'
-    }
+                              steps {
+                                echo "Docker Created"
+                              }
+                           }
+                           }
+                           }
+                 stage('Prod') {
+                     steps {
+                                echo "App is Prod Ready"
+                              }
 
-
-
-
-    stages {
-        stage('Clean'){
-        steps {
-            sh 'mvn clean'
-            }
-        }
-
-     stage {
-            stage('Build'){
-            steps {
-                sh 'mvn test'
-                }
-            }
-     stages {
-              stage('Test'){
-              steps {
-                  sh 'mvn clean'
-                    }
-                }
-            }
-        }
-    }
-
-    success{
-        emailext body : '$PROJECT_NAME - Build # $BUILD_NUMBER - SUCCESS!\r\rCheck console output at $BUILD_URL to view the results.' , subject: ''
-    }
+              }
+}
 }
