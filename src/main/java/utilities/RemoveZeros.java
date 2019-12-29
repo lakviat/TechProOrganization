@@ -17,14 +17,12 @@ this method will remove 0.
                 if(arr.get(i)==0){
                     arr.remove(i);
                     i--;
+                    continue;
                 }
                String s = arr.get(i)+"";
                  if (s.contains("0")) {
                      s = s.replaceAll("0", "");
                      str.add(s);
-                 }
-                 if(i==20){
-                     System.out.println();
                  }
                 }
        return str;
