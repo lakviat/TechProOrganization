@@ -12,7 +12,7 @@ for(int j=0;j<arr.get(i).length()-1;j++){
     }
 }
         }
-        System.out.print("THIS IS THE COUNT OF DUPLICATE STRING : ");
+        System.out.print("\nTHIS IS THE COUNT OF DUPLICATE STRING : " + count + "\n");
         return count;
     }
 
@@ -27,7 +27,7 @@ for(int j=0;j<arr.get(i).length()-1;j++){
                 }
             }
         }
-        System.out.print("THIS IS THE COUNT OF DUPLICATE INTEGERS : ");
+        System.out.print("\nTHIS IS THE COUNT OF DUPLICATE INTEGERS : " + count+ "\n");
         return  count;
     }
 }

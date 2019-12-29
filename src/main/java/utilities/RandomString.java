@@ -7,7 +7,6 @@ public class RandomString {
 
 
 
-
     public static ArrayList<String> randomString(){
         Random random = new Random();
         int count = 0;
@@ -25,7 +24,10 @@ public class RandomString {
             count++;
             array.add(str);
         }
+
         System.out.println("NUMBER OF STRINGS : " + count);
         return array;
+
     }
+
 }
