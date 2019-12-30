@@ -8,25 +8,40 @@ import java.util.List;
 import java.util.Random;
 import java.util.logging.Logger;
 
-public class TestApollo {
+public class TestApollo implements CharCount {
 
-    static private final Logger log = Logger.getLogger(TestApollo.class.getName());
+    public static ArrayList<String> RandomStr;
+    public static ArrayList<Integer> RandomInt;
+
+    @Override
+    public void DigitCount() {
+
+
+    }
+
+    @Override
+    public void StringCharcount() {
+
+    }
+
+
 
 
     public static void main(String[] args) {
+        //RandomNum.randomNum();              //Arif
+        //RandomString.randomString();        //Arif
 
-        RandomNum.randomNum();
-        RandomString.randomString();
+        RandomStr = RandomString.randomString();
+        RandomInt = RandomNum.randomNum();
 
-       RemoveZeros.removeZeros(RandomNum.RandomInteger);
+       RemoveZeros.removeZeros(RandomInt);     //Begimai
 
-       Duplicates.duplicatesString(RandomString.RandomString); // Ayganysh
-       Duplicates.duplicatesInteger(RandomNum.RandomInteger);  // Maks
+       Duplicates.duplicatesString(RandomStr);      // Ayganysh
+       Duplicates.duplicatesInteger(RandomInt);     // Maks
 
-       Anagram.anagram(RandomString.RandomString); // Zhazgul
+       Anagram.anagram(RandomStr);                  // Zhazgul
 
-
-
+       Iterate_String_Int.iterates(RandomStr.toString(),0);
     }
 
 }
