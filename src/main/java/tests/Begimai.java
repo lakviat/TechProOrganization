@@ -10,8 +10,8 @@ public class Begimai {
         System.out.println();
         ArrayList<Integer> arr = RandomNum.randomNum();
 
+        System.out.println("\nThe ArrayList of String numbers without Zeros: ");
         System.out.println(RemoveZeros.removeZeros(arr));
-        int size = arr.size();
-        System.out.println(size);
+        System.out.println("\nArrayList size after removed Zeros: "+arr.size());
     }
 }
