@@ -1,16 +1,16 @@
 package utilities;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class RandomString {
 
-
+    public static ArrayList<String> RandomString;
 
     public static ArrayList<String> randomString(){
         Random random = new Random();
         int count = 0;
-        ArrayList<String> array = new ArrayList<String>();
         String randomset = Config.getProperty("RandomStringGenerate");
         int n = Integer.parseInt(randomset);
         String str = "";
@@ -22,11 +22,11 @@ public class RandomString {
                 str +=a + "";
             }
             count++;
-            array.add(str);
+            RandomString.add(str);
         }
 
         System.out.println("NUMBER OF STRINGS : " + count);
-        return array;
+        return RandomString;
 
     }
 
