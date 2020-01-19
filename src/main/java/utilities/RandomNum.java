@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 
 public class RandomNum {
 
-    public static ArrayList<Integer> RandomInteger;
+    public static ArrayList<Integer> RandomInteger = new ArrayList<>();
 
     static private final Logger log = Logger.getLogger(RandomNum.class.getName());
 
@@ -26,5 +26,7 @@ public class RandomNum {
         System.out.println("NUMBER OF INTEGERS : " + count);
         return RandomInteger;
     }
+    public void RandomNum(){
 
+    }
 }

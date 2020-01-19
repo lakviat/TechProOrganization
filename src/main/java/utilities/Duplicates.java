@@ -1,6 +1,7 @@
 package utilities;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class Duplicates {
     public static int duplicatesString(ArrayList<String>arr){
@@ -23,6 +24,8 @@ for(int j=0;j<arr.get(i).length()-1;j++){
             for(int j=0;j<str.length()-1;j++){
                 if(str.charAt(j)==str.charAt(j+1)){
                     count++;
+
+
 
                 }
             }

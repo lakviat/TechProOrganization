@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class RandomString {
 
-    public static ArrayList<String> RandomString;
+    public static ArrayList<String> RandomString = new ArrayList<>();
 
     public static ArrayList<String> randomString(){
         Random random = new Random();

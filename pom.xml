@@ -18,6 +18,36 @@
             <version>1.2.12</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>4.0.0-alpha-4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>4.0.0-alpha-4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/ru.sbtqa.tag.pagefactory/page-factory-core -->
+        <dependency>
+            <groupId>ru.sbtqa.tag.pagefactory</groupId>
+            <artifactId>page-factory-core</artifactId>
+            <version>15.3.0</version>
+        </dependency>
+
+
+
 
     </dependencies>
 
