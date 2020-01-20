@@ -4,21 +4,31 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.Driver;
 
 public class Amazonpages {
 
-    WebDriver driver;
+    public static WebDriver driver;
 
     public Amazonpages(){
 
-        driver = Driver.getDriver();
         PageFactory.initElements(driver, this);
 
     }
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"nav-signin-tooltip\"]/a/span")
     public WebElement login;
+
+    @FindBy(xpath = "")
+    public WebElement username;
+
+    @FindBy(xpath = "")
+    public WebElement clicksubmitusername;
+
+    @FindBy(xpath =  "")
+    public WebElement passpassword;
+
+    @FindBy(xpath = "")
+    public WebElement clickcontinuepassword;
 
     @FindBy(id = "twotabsearchtextbox")
     public WebElement amazonSearchBox;
