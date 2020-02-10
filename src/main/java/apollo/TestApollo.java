@@ -38,6 +38,8 @@ public class TestApollo implements CharCount {
         Anagram.anagram(RandomStr);                  // Zhazgul
 
        Iterate_String_Int.iterates(RandomStr.toString(),0);
+
+//Checked by Max.
     }
 
 }
