@@ -1,4 +1,4 @@
-# APOLLO PROJECT by TechPro
+# APOLLO PROJECT by TechPro.
 
 There are 8 team members working on this project.
 
@@ -29,7 +29,9 @@ Before you pushing your code to the git you must perform complete testing of you
 ### Create a new branch on Git
 
 Before, send a code to TechProOrganization repository you must create your own branch on Git,with the same name as ticket name that you working on,and add some description to that, with some explanation of the functionalities.
+
 You can push your code ONLY to your branch and then assign reviewers.
+
 After you done with your ticket, and code was reviewed, approved and merged to master branch you must delete you branch.
 
 ## Working on Jira
