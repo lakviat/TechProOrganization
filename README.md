@@ -36,4 +36,4 @@ You can push your code ONLY to your branch and then assign reviewers.
 After you done with your ticket, and code was reviewed, approved and merged to master branch you must delete you branch.
 
 ## Working on Jira
-Everybody who's working on APPOLLO Project must be signed to TechPro Jira Board, and update all the progress on the board.
+Everybody who's working on APPOLLO Project must be signed to TechPro Jira Board, and update all the progress on the board,wit descriptions of work progress.
