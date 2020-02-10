@@ -14,16 +14,40 @@ public class Anagram {
 
         int count = 0;
         log.info("Proceeding with Loop for Anagrams : ");
-        for(String arr : arrs){
-          char [] chArr1 = arr.toCharArray();
-            Arrays.sort(chArr1);
-            for (int i = 0; i < arrs.size(); i++) {
-                if (arrs.get(i).equalsIgnoreCase(chArr1+"")){
-                    count++;
+        int counterAnagram = 0;
+        for(int i = 0; i < arrs.size(); i++) {
+            for (int k = 0; k < arrs.size(); k++) {
+                int counter = 0;
+                if (arrs.get(i).length() == arrs.get(k).length()) {
+                    for (int j = 0; j < arrs.get(i).length(); j++) {
+                        for (int l = 0; l < arrs.get(i).length(); l++) {
+                            if (arrs.get(i).charAt(j) == arrs.get(l).charAt(l)) {
+                                counter++;
+                                arrs.get(i).replaceFirst(arrs.get(k).charAt(l) + "", "");
+                                break;
+                            }
+
+                        }
+                    }
+                    if(counter == arrs.get(i).length()){
+
+                        counterAnagram++;
+                    }
+
+
                 }
             }
         }
-        log.info("THIS IS THE ANAGRMAN NUMBER : " + count);
+        log.info("THIS IS THE ANAGRAM NUMBER : " + count);
         return count;
+
+
+
+
+
+
+
+
+
     }
 }
