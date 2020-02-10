@@ -13,7 +13,7 @@ public class Anagram {
     public static int anagram(ArrayList <String> arrs){
 
         int count = 0;
-        log.info("Proceeding with Loop for Anagrams : ");
+
         for(String arr : arrs){
           char [] chArr1 = arr.toCharArray();
             Arrays.sort(chArr1);
@@ -23,7 +23,7 @@ public class Anagram {
                 }
             }
         }
-        log.info("THIS IS THE ANAGRMAN NUMBER : " + count);
+
         return count;
     }
 }

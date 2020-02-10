@@ -17,28 +17,25 @@ public class TestApollo implements CharCount {
     public void DigitCount() {
 
     }
-
     @Override
     public void StringCharcount() {
 
     }
-
-
-
-
     public static void main(String[] args) {
         //RandomNum.randomNum();              //Arif
-        //RandomString.randomString();        //Arif
-
+        System.out.println(RandomString.randomString());        //Arif
+//create a List of random Strings
         RandomStr = RandomString.randomString();
+//create a List of random Integers
         RandomInt = RandomNum.randomNum();
-
+// removing zeros fro List of Integers
        RemoveZeros.removeZeros(RandomInt);     //Begimai
-
+// finding duplicates in the List of Strings
        Duplicates.duplicatesString(RandomStr);      // Ayganysh
+// finding duplicates in the List of Integers
        Duplicates.duplicatesInteger(RandomInt);     // Maks
-
-       Anagram.anagram(RandomStr);                  // Zhazgul
+// finding anagrams in the List of Strings
+        Anagram.anagram(RandomStr);                  // Zhazgul
 
        Iterate_String_Int.iterates(RandomStr.toString(),0);
     }

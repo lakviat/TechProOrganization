@@ -14,7 +14,7 @@ static private final Logger log = Logger.getLogger(RemoveZeros.class.getName());
     public static ArrayList<String > removeZeros(ArrayList<Integer> arr) {
 
     ArrayList<String> str = new ArrayList<>();
-    log.info("PROCEEDING WITH REMOVING ZERO'S : ");
+
             for (int i = 0; i < arr.size(); i++) {
 
                 if(arr.get(i)==0){
