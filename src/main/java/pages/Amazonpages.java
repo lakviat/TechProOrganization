@@ -11,7 +11,7 @@ public class Amazonpages {
 
     public Amazonpages(){
 
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(driver,this);
 
     }
 
