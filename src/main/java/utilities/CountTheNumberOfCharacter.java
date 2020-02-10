@@ -13,15 +13,16 @@ public class CountTheNumberOfCharacter {
 
         int count = 0;
 
-        for(String element : stringList){
-            String [] array = element.split("");
-            for(int i = 0; i<array.length; i++){
+        for (String element : stringList) {
+            String[] array = element.split("");
+            for (int i = 0; i < array.length; i++) {
                 count++;
             }
         }
         return count;
 
     }
-    
+
+
 
 }
