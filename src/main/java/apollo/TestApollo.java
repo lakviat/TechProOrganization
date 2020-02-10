@@ -15,7 +15,6 @@ public class TestApollo implements CharCount {
 
     @Override
     public void DigitCount() {
-        //This is my code i want to merge with master branch, and this is what i done so far
 
     }
 
