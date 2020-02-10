@@ -43,18 +43,6 @@ public class Anagram {
 
 
 
-//
-//        for (int i = 0; i < arrs.size()-1; i++) {
-//            for (int j = 0; j < arrs.size()-1; j++) {
-//                if(arrs.get(i).charAt(i) == arrs.get(j).charAt(j)){
-//                    count++;
-//                    arrs.get(j).replaceFirst(arrs.get(j).charAt(j) + "", "");
-//                    break;
-//                }
-//
-//            }
-//
-//        }
 
 
 
