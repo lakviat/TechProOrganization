@@ -12,42 +12,23 @@ public class Anagram {
 
     public static int anagram(ArrayList <String> arrs){
 
-        int count = 0;
-        log.info("Proceeding with Loop for Anagrams : ");
-        int counterAnagram = 0;
-        for(int i = 0; i < arrs.size(); i++) {
-            for (int k = 0; k < arrs.size(); k++) {
-                int counter = 0;
-                if (arrs.get(i).length() == arrs.get(k).length()) {
-                    for (int j = 0; j < arrs.get(i).length(); j++) {
-                        for (int l = 0; l < arrs.get(i).length(); l++) {
-                            if (arrs.get(i).charAt(j) == arrs.get(l).charAt(l)) {
-                                counter++;
-                                arrs.get(i).replaceFirst(arrs.get(k).charAt(l) + "", "");
-                                break;
-                            }
-
-                        }
-                    }
-                    if(counter == arrs.get(i).length()){
-
-                        counterAnagram++;
-                    }
-
-
+        int counter = 0;
+        for (int i = 0; i < arrs.size(); i++) {
+            String [] arrayOne = arrs.get(i).split("");
+            Arrays.sort(arrayOne);
+            for (int j = i+1; j < arrs.size(); j++) {
+                String [] arrayTwo = arrs.get(j).split("");
+                Arrays.sort(arrayTwo);
+                if (Arrays.equals(arrayOne, arrayTwo)){
+                    counter++;
+                    arrs.remove(j);
+                    arrs.remove(i);
+                    i--;
+                    break;
                 }
             }
         }
-        log.info("THIS IS THE ANAGRAM NUMBER : " + count);
-        return count;
-
-
-
-
-
-
-
-
-
+    
+        return counter;
     }
 }
