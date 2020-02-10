@@ -38,16 +38,7 @@ public class Anagram {
                 }
             }
         }
-        log.info("THIS IS THE ANAGRAM NUMBER : " + count);
-        return count;
-
-
-
-
-
-
-
-
-
+    
+        return counter;
     }
 }
