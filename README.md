@@ -23,6 +23,7 @@ Also be able to accses TechPro Jira Board and TechProOrganization repozitory on 
 ## Working on Inteliji
 ### Dont forget tu pull the most updated code from the Git!
 Once you done with your part of code you have to updated on the Git.
+
 Before you pushing your code to the git you must perform complete testing of your code in Inteliji to make sure thats its working as expected.
 
 ## Working on Git
