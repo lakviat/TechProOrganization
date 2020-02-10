@@ -30,7 +30,7 @@ public class Anagram {
                         }
                     }
                     if(counter == arrs.get(i).length()){
-                        
+
                         counterAnagram++;
                     }
 
