@@ -10,9 +10,7 @@ public class Amazonpages {
     public static WebDriver driver;
 
     public Amazonpages(){
-
         PageFactory.initElements(driver, this);
-
     }
 
     @FindBy(xpath = "//*[@id=\"nav-signin-tooltip\"]/a/span")
