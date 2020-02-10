@@ -24,20 +24,25 @@ public class TestApollo implements CharCount {
     }
 
     public static void main(String[] args) {
-        //RandomNum.randomNum();              //Arif
-        //RandomString.randomString();        //Arif
-
+        // created the Random method for get random strings
         RandomStr = RandomString.randomString();
+        // created the Random method for get random int
         RandomInt = RandomNum.randomNum();
 
-       RemoveZeros.removeZeros(RandomInt);     //Begimai
+        // Remove zero class has removeZeros method it will remove all zeros in random int
+        RemoveZeros.removeZeros(RandomInt);     //Begimai
 
-       Duplicates.duplicatesString(RandomStr);      // Ayganysh
-       Duplicates.duplicatesInteger(RandomInt);     // Maks
+        // Dublicates class has dublicatesString method it returns dublicate strings
+        Duplicates.duplicatesString(RandomStr);      // Ayganysh
 
-       Anagram.anagram(RandomStr);                  // Zhazgul
+        // Dublicates class has dublicatesInteger method  it returns dublicate ints
+        Duplicates.duplicatesInteger(RandomInt);     // Maks
 
-       Iterate_String_Int.iterates(RandomStr.toString(),0);
+        //Anagram class has anagram method it takes ArrayList it counts anagram strings
+        Anagram.anagram(RandomStr);                  // Zhazgul
+
+        //Iterate method iterates all strings in the randomStr class
+        Iterate_String_Int.iterates(RandomStr.toString(),0);
     }
 
 }
