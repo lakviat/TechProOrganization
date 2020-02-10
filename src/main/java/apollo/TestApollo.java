@@ -23,9 +23,6 @@ public class TestApollo implements CharCount {
 
     }
 
-
-
-
     public static void main(String[] args) {
         //RandomNum.randomNum();              //Arif
         //RandomString.randomString();        //Arif
